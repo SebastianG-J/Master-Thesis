@@ -8,7 +8,7 @@ This repository contains the code for our Master's thesis, which explores whethe
 
 Social media posts are scraped from X and financial data (S&P 500, VIX, and macroeconomic indicators) is retrieved using the Yahoo Finance API.
 
-**Folder:** `Data scrapers`  
+**Folder:** [`Data scrapers`](./Data%20scrapers)  
 Contains scripts and notebooks for collecting X posts and downloading financial market data.
 
 ---
@@ -17,7 +17,7 @@ Contains scripts and notebooks for collecting X posts and downloading financial 
 
 We use large language models (RoBERTa and FinBERT) to classify tweet sentiment. These sentiment labels are then weighted based on user influence, measured by follower count, likes, and reposts.
 
-**Folder:** `Sentiment analysis`  
+**Folder:** [`Sentiment analysis`](./Sentiment%20analysis)  
 Contains fine-tuning scripts and sentiment inference models for post classification.
 
 **Notebook:** `Constructing sentiment.ipynb`  
@@ -29,7 +29,7 @@ Illustrates how influence-weighted sentiment scores are calculated.
 
 The influence-weighted sentiment data is merged with return data and financial indicators to create the final modeling dataset.
 
-**Folder:** `Combining financial data`  
+**Folder:** [`Combining financial data`](./Combining%20financial%20data)  
 Contains notebooks for aligning sentiment data with S&P 500 returns, volatility, and macroeconomic variables.
 
 ---
@@ -43,9 +43,7 @@ We evaluate predictive performance using:
 - XGBoost  
 - LSTM (Deep Learning)
 
-**Folder:** `Models`  
-Contains all scripts and notebooks for model training, validation, and performance comparison.
+**Folder:** [`Models`](./Models)  
+Contains scripts and notebooks for training and evaluating all forecasting models.
 
 ---
-
-This repository includes all necessary components to reproduce the creation of sentiment variables and run forecasting experiments for the thesis.
