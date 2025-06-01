@@ -1,43 +1,51 @@
 # 🧠 Influence-Weighted Sentiment for Stock Return Forecasting
 
-This repository contains the code for our Master's thesis exploring whether investor sentiment extracted from X (formerly Twitter) becomes more predictive when weighted by user influence. We construct an **influence-weighted sentiment variable** and evaluate its forecasting performance using four different models.
+This repository contains the code for our Master's thesis, which explores whether investor sentiment extracted from X (formerly Twitter) becomes more predictive when weighted by user influence. The main focus is on constructing a novel **influence-weighted sentiment variable** and comparing its forecasting performance to raw sentiment across four models.
 
 ---
 
 ## 📥 1. Data Collection
 
-Social media data is collected and scraped using:
-- [`Data scrapers/selenium.ipynb`](Data%20scrapers/selenium.ipynb)
+Social media posts are scraped from X and financial data (S&P 500, VIX, and macroeconomic indicators) is retrieved using the Yahoo Finance API.
 
-Market and financial data (S&P 500, VIX, macro variables) is handled in:
-- [`Combining financial data/Data Preprocessing (yfinance + sentiment) .ipynb`](Combining%20financial%20data/Data%20Preprocessing%20%28yfinance%20+%20sentiment%29%20.ipynb)
+**Folder:** `Data scrapers`  
+Contains scripts and notebooks for collecting X posts and downloading financial market data.
 
 ---
 
 ## 💬 2. Sentiment Variable Creation
 
-### Sentiment Classification  
-Posts are classified using RoBERTa and FinBERT in:
-- [`Sentiment analysis/`](Sentiment%20analysis/)
+We use large language models (RoBERTa and FinBERT) to classify tweet sentiment. These sentiment labels are then weighted based on user influence, measured by follower count, likes, and reposts.
 
-### Influence Weighting  
-Sentiment is adjusted by engagement metrics (likes, reposts, follower count) in:
-- [`Constructing sentiment.ipynb`](Constructing%20sentiment.ipynb)
+**Folder:** `Sentiment analysis`  
+Contains fine-tuning scripts and sentiment inference models for post classification.
+
+**Notebook:** `Constructing sentiment.ipynb`  
+Illustrates how influence-weighted sentiment scores are calculated.
 
 ---
 
-## 📈 3. Forecasting Models
+## 💼 3. Financial Data Integration
 
-The following models are used to evaluate prediction performance:
+The influence-weighted sentiment data is merged with return data and financial indicators to create the final modeling dataset.
 
-- **Ridge Regression**  
-  [`Models/ridge_model.py`](Models/ridge_model.py)
+**Folder:** `Combining financial data`  
+Contains notebooks for aligning sentiment data with S&P 500 returns, volatility, and macroeconomic variables.
 
-- **Random Forest**  
-  [`Models/random_forest.py`](Models/random_forest.py)
+---
 
-- **XGBoost**  
-  [`Models/xgboost_model.py`](Models/xgboost_model.py)
+## 📈 4. Forecasting Models
 
-- **LSTM**  
-  [`Models/lstm_model.py`](Models/lstm_model.py)
+We evaluate predictive performance using:
+
+- Ridge Regression  
+- Random Forest  
+- XGBoost  
+- LSTM (Deep Learning)
+
+**Folder:** `Models`  
+Contains all scripts and notebooks for model training, validation, and performance comparison.
+
+---
+
+This repository includes all necessary components to reproduce the creation of sentiment variables and run forecasting experiments for the thesis.
