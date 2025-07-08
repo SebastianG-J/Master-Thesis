@@ -1,6 +1,6 @@
 # 🧠 Influence-Weighted Sentiment for Stock Return Forecasting
 
-This repository contains the code for our Master's thesis, which explores whether investor sentiment extracted from X (formerly Twitter) becomes more predictive when weighted by user influence. The main focus is on constructing a novel **influence-weighted sentiment variable** and comparing its forecasting performance to raw sentiment across four models.
+This repository contains the code for our Master's thesis, which explores whether investor sentiment extracted from X (formerly Twitter) becomes more predictive when weighted by user influence. The main focus is on constructing a novel **influence-weighted sentiment variable** and comparing its forecasting performance to raw sentiment across four models. The final Master's Thesis is located in the folder [`Final Project`](./Final%20Project).
 
 ---
 
