@@ -4,6 +4,7 @@ This repository contains the code for our Master's thesis, which explores whethe
 
 ### Master Thesis
 The final Master's Thesis is located in the folder [`Final Project`](./Final%20Project).
+As it is too big for Github, it can also be accessed through the following link [Master Thesis (PDF)](https://drive.google.com/file/d/1QVt8tTajFkd3iauIV07N7uUUgGI-K7pQ/view?usp=sharing)
 
 ---
 
